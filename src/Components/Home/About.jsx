@@ -1,67 +1,161 @@
 import { FaCalendarAlt, FaGamepad, FaGraduationCap, FaHome, FaMailBulk, FaPhoneAlt, FaUniversity, FaUser } from "react-icons/fa";
-import { motion } from "framer-motion"
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const personalInfo = [
+  { icon: FaUser, label: "Name", value: "Md. Ashiqur Rahman Tonmoy" },
+  { icon: FaMailBulk, label: "Email", value: "ashiqurtonmoy.official@gmail.com" },
+  { icon: FaPhoneAlt, label: "Phone", value: "+8801784707310" },
+  { icon: FaHome, label: "Location", value: "Rajbari, Dhaka, Bangladesh" },
+];
+
+const academicInfo = [
+  { icon: FaGraduationCap, label: "Degree", value: "B.Sc in Software Engineering" },
+  { icon: FaUniversity, label: "University", value: "Daffodil International University" },
+  { icon: FaCalendarAlt, label: "Birthday", value: "13th November, 2000" },
+  { icon: FaGamepad, label: "Hobby", value: "Books, Cricket, Video Games" },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.08 },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
 const About = () => {
+  return (
+    <div className="section">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="section-title">
+          About <span className="text-gradient">Me</span>
+        </h2>
+        <div className="section-divider" />
+        <p className="section-subtitle">
+          Passionate developer with a strong foundation in software engineering, dedicated to building clean, scalable applications.
+        </p>
+      </motion.div>
 
-    return (
-        <div className='bg-orange-100 lg:px-24 px-5 lg:py-10 py-2 h-full'>
-            <div className="about-me">
-                <h3 className="lg:text-3xl text-lg uppercase text-orange-700 lg:my-10">A Bit About Me</h3>
-                <p className="font-normal text-sm lg:text-xl">I am a passionate junior web developer with a strong foundation in software engineering. I recently graduated from Daffodil International University, where I gained expertise in various web technologies. I enjoy developing simple, clean and slick websites that provide real value to the end user. I am a lifelong learner, continuously expanding my knowledge and staying up-to-date with the latest trends in web development. I am passionate about creating exceptional user experiences.</p>
-                <div className="lg:flex justify-between mt-4 lg:mt-14 font-normal">
-                    <div>
-                        <div className="lg:mb-10 mb-4 text-center lg:text-xl text-sm">
-                            <div className="mr-5 flex items-center">
-                                <p className="mr-2 text-orange-700 flex items-center"><FaUser className="mr-2"></FaUser> Name:</p>
-                                <p className="about-info-para">Md. Ashiqur Rahman Tonmoy</p>
-                            </div>
-                            <div className="flex items-center">
-                                <p className="mr-2 text-orange-700 flex items-center"><FaMailBulk className="mr-2"></FaMailBulk> Email:</p>
-                                <p className="about-info-para">ashiqurtonmoy.official@gmail.com</p>
-                            </div>
-                            <div className="mr-5 flex items-center">
-                                <p className="mr-2 text-orange-700 flex items-center"><FaPhoneAlt className="mr-2"></FaPhoneAlt> Phone:</p>
-                                <p className="about-info-para">01784707310</p>
-                            </div>
-                            <div className="flex items-center">
-                                <p className="about-info-title mr-2 text-orange-700 flex items-center"><FaHome className="mr-2"></FaHome> Home: </p>
-                                <p className="about-info-para">Rajbari, Dhaka, Bangladesh</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="mb-10 text-center lg:text-xl text-sm">
-                            <div className="flex items-center">
-                                <p className="mr-2 text-orange-700 flex items-center"><FaGraduationCap className="mr-2"></FaGraduationCap> Degree:</p>
-                                <p>B.S.C in Software Engineering</p>
-                            </div>
-                            <div className="flex items-center">
-                                <p className="mr-2 text-orange-700 flex items-center"><FaUniversity className="mr-2"></FaUniversity> University:</p>
-                                <p>Daffodil International University</p>
-                            </div>
-                            <div className="flex items-center">
-                                <p className="mr-2 text-orange-700 flex items-center"><FaCalendarAlt className="mr-2"></FaCalendarAlt> Birthday:</p>
-                                <p>13th November, 2000</p>
-                            </div>
-                            <div className="flex items-center">
-                                <p className="mr-2 text-orange-700 flex items-center"><FaGamepad className="mr-2"></FaGamepad> Hobby:</p>
-                                <p>Books, Cricket, Video Games</p>
-                            </div>
-                        </div>
-                    </div>
+      {/* Bio section */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="glass-card"
+        style={{ padding: 'clamp(1.25rem, 3vw, 2rem)', marginBottom: '2rem' }}
+      >
+        <p style={{ color: 'var(--text-secondary)', fontSize: 'clamp(0.88rem, 2vw, 1rem)', lineHeight: 1.8 }}>
+          I am a passionate web developer with a strong foundation in software engineering.
+          I graduated from Daffodil International University, where I gained expertise in various web technologies.
+          I enjoy developing simple, clean and slick websites that provide real value to the end user.
+          I am a lifelong learner, continuously expanding my knowledge and staying up-to-date with the latest trends in web development.
+          I am passionate about creating exceptional user experiences and building production-grade backend systems.
+        </p>
+      </motion.div>
+
+      {/* Info Cards Grid */}
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 480px), 1fr))', gap: '1.5rem' }}>
+        {/* Personal Info */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="glass-card"
+          style={{ padding: 'clamp(1.25rem, 3vw, 2rem)' }}
+        >
+          <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '1.25rem', color: 'var(--accent-light)' }}>
+            Personal Details
+          </h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {personalInfo.map((item) => (
+              <motion.div
+                key={item.label}
+                variants={itemVariants}
+                style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}
+              >
+                <div style={{
+                  width: 38,
+                  height: 38,
+                  borderRadius: 10,
+                  background: 'rgba(124, 58, 237, 0.12)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}>
+                  <item.icon style={{ color: 'var(--accent-primary)', fontSize: '0.9rem' }} />
                 </div>
-            </div>
-            <div className='text-center py-28'>
-                <motion.div className="box"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: .9 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }} >
-                    <Link to={'/skills'} className="bg-orange-700 text-white hover:bg-gradient-to-r from-slate-900 to-orange-900  p-3 rounded-lg ml-2 hover:text-white">See My Skills</Link>
-                </motion.div>
-            </div>
-        </div>
-    );
+                <div>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 2 }}>
+                    {item.label}
+                  </p>
+                  <p style={{ fontSize: '0.92rem', color: 'var(--text-primary)', fontWeight: 500 }}>
+                    {item.value}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Academic Info */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="glass-card"
+          style={{ padding: 'clamp(1.25rem, 3vw, 2rem)' }}
+        >
+          <h3 style={{ fontSize: '1.1rem', fontWeight: 600, marginBottom: '1.25rem', color: 'var(--accent-light)' }}>
+            Education & Interests
+          </h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {academicInfo.map((item) => (
+              <motion.div
+                key={item.label}
+                variants={itemVariants}
+                style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}
+              >
+                <div style={{
+                  width: 38,
+                  height: 38,
+                  borderRadius: 10,
+                  background: 'rgba(6, 182, 212, 0.12)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}>
+                  <item.icon style={{ color: 'var(--accent-secondary)', fontSize: '0.9rem' }} />
+                </div>
+                <div>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 2 }}>
+                    {item.label}
+                  </p>
+                  <p style={{ fontSize: '0.92rem', color: 'var(--text-primary)', fontWeight: 500 }}>
+                    {item.value}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
 };
 
 export default About;

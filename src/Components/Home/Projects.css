@@ -1,3 +1,8 @@
-.image-container{
-  transition: 5s;
+/* Project Card Image Transitions */
+.project-image {
+  transition: object-position 4s ease;
+}
+
+.project-card:hover .project-image {
+  object-position: bottom;
 }
