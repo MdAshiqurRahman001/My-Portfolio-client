@@ -76,7 +76,7 @@ const Portfolio = () => {
         </h2>
         <div className="section-divider" />
         <p className="section-subtitle">
-          A selection of projects I've built — from team collaborations to solo ventures
+          A selection of projects I have built — from team collaborations to solo ventures
         </p>
       </motion.div>
 
