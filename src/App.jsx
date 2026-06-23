@@ -6,6 +6,7 @@ import Skills from './Components/Home/Skills'
 import Portfolio from './Components/Home/Portfolio'
 import Contact from './Components/Home/Contact'
 import Footer from './Components/Home/Footer'
+import CustomCursor from './Components/CustomCursor'
 import { FaArrowUp } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -13,47 +14,35 @@ function App() {
   const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400)
-    }
+    const handleScroll = () => setShowScrollTop(window.scrollY > 400)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
   return (
     <>
-      {/* Background effects */}
+      {/* Unique visual layers */}
+      <CustomCursor />
       <div className="mesh-gradient" />
       <div className="dot-grid" />
+      <div className="noise-texture" />
 
       {/* Main content */}
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Navbar />
         <main>
-          <section id="home">
-            <Home />
-          </section>
-          <section id="about">
-            <About />
-          </section>
-          <section id="skills">
-            <Skills />
-          </section>
-          <section id="projects">
-            <Portfolio />
-          </section>
-          <section id="contact">
-            <Contact />
-          </section>
+          <section id="home"><Home /></section>
+          <section id="about"><About /></section>
+          <section id="skills"><Skills /></section>
+          <section id="projects"><Portfolio /></section>
+          <section id="contact"><Contact /></section>
         </main>
         <Footer />
       </div>
 
-      {/* Scroll to top button */}
+      {/* Scroll to top */}
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
