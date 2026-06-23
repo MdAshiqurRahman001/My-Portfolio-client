@@ -57,7 +57,7 @@ const Home = () => {
         >
             <div className="bento-grid">
 
-                {/* ── Name card ── */}
+                {/* Name card */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const Home = () => {
                     </p>
                 </motion.div>
 
-                {/* ── Photo card ── */}
+                {/* Photo card */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.92 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -96,7 +96,7 @@ const Home = () => {
                     </div>
                 </motion.div>
 
-                {/* ── Stat cards ── */}
+                {/* Stat cards */}
                 {stats.map((stat, i) => (
                     <motion.div
                         key={stat.label}
@@ -110,7 +110,7 @@ const Home = () => {
                     </motion.div>
                 ))}
 
-                {/* ── Terminal card ── */}
+                {/* Terminal card */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ const Home = () => {
 
 
 
-                {/* ── CTA card ── */}
+                {/* CTA card */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
