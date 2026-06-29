@@ -67,7 +67,7 @@ const Navbar = () => {
           className="navbar-logo"
         >
           <span className="logo-bracket">&lt;</span>
-          Tonmoy
+          TONMOY
           <span className="logo-bracket">/&gt;</span>
         </a>
 

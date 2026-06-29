@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub, FaTimes } from "react-icons/fa";
 import './Projects.css'
-import image1 from '../../assets/Sports-Zone.png'
+import fullImage1 from '../../assets/Sports-Zone-Full.png'
 import image2 from '../../assets/Toy-Cars.png'
 import image3 from '../../assets/Profit Prime.png'
 
@@ -22,14 +22,14 @@ const projects = [
         tech: ["TailwindCSS", "DaisyUI", "React", "React Router", "Firebase", "Express JS", "MongoDB", "Vercel"],
         liveUrl: "profit-prime.netlify.app",
         liveFull: "https://profit-prime.netlify.app",
-        clientRepo: "https://github.com/T-0-N-M-0-Y/ProfitPrime/tree/main",
-        serverRepo: "https://github.com/T-0-N-M-0-Y/ProfitPrime-Server",
+        clientRepo: "https://github.com/MdAshiqurRahman001/ProfitPrime",
+        serverRepo: "https://github.com/MdAshiqurRahman001/ProfitPrime-Server",
     },
     {
         id: 2,
         title: "Sports Zone",
         subtitle: "Sports Training Center Platform",
-        image: image1,
+        image: fullImage1,
         description: "A Sports Based Training Center where students can enroll and train in their desired sports with their favourite instructors.",
         features: [
             "3 Dashboards: Students, Instructors & Admin",
@@ -38,10 +38,10 @@ const projects = [
             "Stripe payment integration",
         ],
         tech: ["TailwindCSS", "DaisyUI", "React", "React Router", "Firebase", "JWT", "Express JS", "MongoDB", "Stripe", "Vercel"],
-        liveUrl: "sports-zone-app.netlify.app",
-        liveFull: "https://sports-zone-app.netlify.app",
-        clientRepo: "https://github.com/T-0-N-M-0-Y/Sports-Zone-Client",
-        serverRepo: "https://github.com/T-0-N-M-0-Y/Sports-Zone-Server",
+        liveUrl: "https://sports-zone-client.vercel.app",
+        liveFull: "https://sports-zone-client.vercel.app",
+        clientRepo: "https://github.com/MdAshiqurRahman001/Sports-Zone-Client",
+        serverRepo: "https://github.com/MdAshiqurRahman001/Sports-Zone-Server",
     },
     {
         id: 3,
@@ -58,8 +58,8 @@ const projects = [
         tech: ["TailwindCSS", "DaisyUI", "React", "React Router", "Firebase", "Express JS", "MongoDB", "Vercel"],
         liveUrl: "assingment-11-toy-cars.web.app",
         liveFull: "https://assingment-11-toy-cars.web.app",
-        clientRepo: "https://github.com/T-0-N-M-0-Y/Toy-Cars-Client",
-        serverRepo: "https://github.com/T-0-N-M-0-Y/Toy-Cars-Server",
+        clientRepo: "https://github.com/MdAshiqurRahman001/Toy-Cars-Client",
+        serverRepo: "https://github.com/MdAshiqurRahman001/Toy-Cars-Server",
     },
 ];
 
@@ -165,6 +165,12 @@ const Portfolio = () => {
                             <p style={{ color: 'var(--text-secondary)', lineHeight: 1.75, marginBottom: '1.25rem', fontSize: '0.92rem' }}>
                                 {selected.description}
                             </p>
+
+                            {selected.fullImage && (
+                                <div style={{ marginBottom: '1.5rem', borderRadius: '8px', overflowY: 'auto', maxHeight: '350px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                                    <img src={selected.fullImage} alt={`${selected.title} full view`} style={{ width: '100%', display: 'block' }} />
+                                </div>
+                            )}
 
                             <div style={{ marginBottom: '1.25rem' }}>
                                 <h4 style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--accent-light)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.65rem' }}>

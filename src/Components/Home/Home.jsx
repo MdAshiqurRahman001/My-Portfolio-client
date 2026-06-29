@@ -4,8 +4,8 @@ import useScramble from '../../Hooks/useScramble';
 import MagneticButton from '../MagneticButton';
 
 const stats = [
-    { value: '3+', label: 'Projects Built' },
-    { value: '1+', label: 'Yrs Experience' },
+    { value: '20+', label: 'Projects Built' },
+    { value: '1+', label: 'Years Experience' },
 ];
 
 const TerminalCode = () => (
@@ -22,20 +22,21 @@ const TerminalCode = () => (
             <span style={{ color: '#94a3b8' }}> = {'{'}</span>{'\n'}
             <span style={{ color: '#94a3b8' }}>  name</span>
             <span style={{ color: '#64748b' }}>: </span>
-            <span style={{ color: '#a3e635' }}>"Tonmoy"</span>
+            <span style={{ color: '#a3e635' }}>&quot;Tonmoy&quot;</span>
             <span style={{ color: '#64748b' }}>,</span>{'\n'}
             <span style={{ color: '#94a3b8' }}>  role</span>
             <span style={{ color: '#64748b' }}>: </span>
-            <span style={{ color: '#a3e635' }}>"Web Developer"</span>
+            <span style={{ color: '#a3e635' }}>&quot;Web Developer&quot;</span>
             <span style={{ color: '#64748b' }}>,</span>{'\n'}
             <span style={{ color: '#94a3b8' }}>  stack</span>
             <span style={{ color: '#64748b' }}>: [</span>{'\n'}
-            <span style={{ color: '#a3e635' }}>    "TypeScript"</span><span style={{ color: '#64748b' }}>, </span>
-            <span style={{ color: '#a3e635' }}>"Node.js"</span><span style={{ color: '#64748b' }}>, </span>
-            <span style={{ color: '#a3e635' }}>"Express.js"</span><span style={{ color: '#64748b' }}>,</span>{'\n'}
-            <span style={{ color: '#a3e635' }}>    "MongoDB"</span><span style={{ color: '#64748b' }}>, </span>
-            <span style={{ color: '#a3e635' }}>"Prisma"</span><span style={{ color: '#64748b' }}>, </span>
-            <span style={{ color: '#a3e635' }}>"React.js"</span><span style={{ color: '#64748b' }}>,</span>{'\n'}
+            <span style={{ color: '#a3e635' }}>    &quot;Typescript&quot;</span><span style={{ color: '#64748b' }}>, </span>
+            <span style={{ color: '#a3e635' }}>&quot;Javascript&quot;</span><span style={{ color: '#64748b' }}>, </span>
+            <span style={{ color: '#a3e635' }}>&quot;Node.js&quot;</span><span style={{ color: '#64748b' }}>, </span>
+            <span style={{ color: '#a3e635' }}>&quot;Express.js&quot;</span><span style={{ color: '#64748b' }}>,</span>{'\n'}
+            <span style={{ color: '#a3e635' }}>    &quot;MongoDB&quot;</span><span style={{ color: '#64748b' }}>, </span>
+            <span style={{ color: '#a3e635' }}>&quot;Prisma&quot;</span><span style={{ color: '#64748b' }}>, </span>
+            <span style={{ color: '#a3e635' }}>&quot;React.js&quot;</span><span style={{ color: '#64748b' }}>,</span>{'\n'}
             <span style={{ color: '#64748b' }}>  ],</span>{'\n'}
             <span style={{ color: '#94a3b8' }}>  available</span>
             <span style={{ color: '#64748b' }}>: </span>
