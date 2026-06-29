@@ -132,7 +132,7 @@ const Home = () => {
                 >
                     <MagneticButton>
                         <a
-                            href="https://drive.google.com/uc?export=download&id=1ULmwe4BiX5cxDJhn0ZgHRYJXQFZf82Hh"
+                            href="https://drive.google.com/uc?export=download&id=1n36EHO4tiG_b7XTpfYsZq4_qfdi-b9pT"
                             className="btn-primary"
                         >
                             <FaDownload /> Resume

@@ -25,7 +25,7 @@ const Contact = () => {
         e.preventDefault();
         setSending(true);
 
-        emailjs.sendForm('service_zhj3he7', 'template_osftikb', form.current, '7Mvl3Q6mDRfontGIK')
+        emailjs.sendForm('service_zhj3he7', 'template_osftikb', form.current, 'bGBGfoUNE5oYU4a5a')
             .then(() => {
                 showToast('success', 'Message sent successfully! I\'ll get back to you soon.');
                 form.current.reset();
